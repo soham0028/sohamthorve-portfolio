@@ -1,39 +1,104 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background: #f4f4f4;
+    color: #333;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 1em 0;
-    text-align: center;
+    padding: 1rem 0;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 0.5em;
+    margin: 0 10px;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
+    font-size: 1.2rem;
+}
+
+#hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+#hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    animation: bounceIn 1.5s;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
 }
 
 section {
-    padding: 2em 1em;
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 0;
+    animation: slideUp 1s ease-in-out;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+section p, section ul {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 footer {
+    text-align: center;
+    padding: 1rem 0;
     background: #333;
     color: #fff;
-    text-align: center;
-    padding: 1em 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
